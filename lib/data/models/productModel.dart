@@ -166,3 +166,17 @@ class GroupDeal {
     );
   }
 }
+
+class Product {
+  bool ok;
+  ProductData data;
+
+  Product({required this.ok, required this.data});
+
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      ok: json['ok'],
+      data: ProductData.fromJson(json['data']),
+    );
+  }
+}

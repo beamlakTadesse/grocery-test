@@ -7,4 +7,8 @@ class ProductRepo {
   Future<Either<ApiFailure, ProductModel>> getProducts() {
     return ProductDataSource().getProducts();
   }
+
+  Future<Either<ApiFailure, Product>> getProduct(String id) {
+    return ProductDataSource().getProduct(id);
+  }
 }

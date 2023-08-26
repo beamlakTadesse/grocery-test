@@ -1,8 +1,10 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:grocery/core/constants/constants.dart';
 import 'package:grocery/core/utils/image_constant.dart';
 import 'package:grocery/core/utils/navigator_service.dart';
 import 'package:grocery/core/utils/size_utils.dart';
 import 'package:grocery/data/models/productModel.dart';
+import 'package:grocery/presentation/itemdetails_two_screen/bloc/itemdetails_two_bloc.dart';
 import 'package:grocery/routes/app_routes.dart';
 import 'package:grocery/theme/app_decoration.dart';
 import 'package:grocery/theme/custom_text_style.dart';
@@ -26,6 +28,9 @@ class AvocadoprofileItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
+        context
+            .read<ItemdetailsTwoBloc>()
+            .add(ItemdetailEvent(avocadoprofileItemModelObj.id));
         NavigatorService.pushNamed(
           AppRoutes.itemdetailsTwoScreen,
         );

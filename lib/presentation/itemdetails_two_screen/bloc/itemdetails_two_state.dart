@@ -29,3 +29,17 @@ class ItemdetailsTwoState extends Equatable {
     );
   }
 }
+
+class LoadingProductState extends ItemdetailsTwoState {}
+
+class LoadedProductState extends ItemdetailsTwoState {
+  final Product data;
+
+  LoadedProductState({required this.data});
+}
+
+class LoadedProductErrorState extends ItemdetailsTwoState {
+  final String msg;
+
+  LoadedProductErrorState({required this.msg});
+}

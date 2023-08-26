@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:grocery/core/utils/navigator_service.dart';
 import 'package:grocery/presentation/home_page/bloc/product_bloc.dart';
+import 'package:grocery/presentation/itemdetails_two_screen/bloc/itemdetails_two_bloc.dart';
 import 'package:grocery/routes/app_routes.dart';
 import 'core/app_export.dart';
 import 'core/utils/pref_utils.dart';
@@ -32,6 +33,8 @@ class MyApp extends StatelessWidget {
                   themeType: PrefUtils().getThemeData(),
                 ))),
         BlocProvider<ProductBloc>(create: (_) => ProductBloc(ProductState())),
+        BlocProvider<ItemdetailsTwoBloc>(
+            create: (_) => ItemdetailsTwoBloc(ItemdetailsTwoState()))
       ],
       child: BlocBuilder<ThemeBloc, ThemeState>(
         builder: (context, state) {

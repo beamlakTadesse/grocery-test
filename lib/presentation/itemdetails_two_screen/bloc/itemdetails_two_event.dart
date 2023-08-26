@@ -14,3 +14,11 @@ class ItemdetailsTwoInitialEvent extends ItemdetailsTwoEvent {
   @override
   List<Object?> get props => [];
 }
+
+class ItemdetailEvent extends ItemdetailsTwoEvent {
+  final String id;
+
+  ItemdetailEvent(this.id);
+  @override
+  List<Object?> get props => [];
+}

@@ -119,9 +119,7 @@ class HomePage extends StatelessWidget {
                                                         CrossAxisAlignment
                                                             .start,
                                                     children: [
-                                                      Text(
-                                                          "lbl_trending_deals"
-                                                              .tr,
+                                                      Text("Latest Products".tr,
                                                           style: CustomTextStyles
                                                               .titleMediumBlack900SemiBold_1),
                                                       CustomImageView(
@@ -264,7 +262,9 @@ class HomePage extends StatelessWidget {
                                                                     index],
                                                               );
                                                             })
-                                                        : CircularProgressIndicator()))
+                                                        : Center(
+                                                            child:
+                                                                CircularProgressIndicator())))
                                           ])))),
                           Align(
                               alignment: Alignment.topRight,
